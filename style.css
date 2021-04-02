@@ -1,0 +1,316 @@
+/*
+Theme Name: lotterytheme
+Theme URI: https://lotteryreport.ga/htdocs/wp-content/themes/lotterytheme
+Author: Sean Phan
+Author URI: https://lotteryreport.ga
+Description: This is a unique them for Lottery Report System.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: lotterytheme
+*/
+html, body {
+    height: 100%;
+    margin-top: 0 !important;
+    margin: 0 !important;
+}
+
+
+#close_shift_page, #sale_report_page {
+    /* height: fit-content; */
+    max-height: 100%;
+}
+
+#main-holder {
+    overflow: hidden;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    background: url(image/background.jpg);
+    background-size: cover;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+}
+
+td {
+    height: 15px;
+    text-align: left;
+}
+
+tr:nth-child(odd){background-color: #f2f2f2}
+tr:nth-child(even){background-color: rgb(221, 221, 221)}
+
+.head {
+    width: 50px;
+}
+
+#game_info {
+    table-layout: fixed;
+}
+
+#scratcher_report_table {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.group_function {
+    margin: 0.25em;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background: rgba(217, 248, 223, 0.4);
+    padding-bottom: 30px;
+}
+
+#firstCol {
+    float: left;
+    margin-left: 0.5em;
+    width: 49%;
+}
+
+#secondCol {
+    float: right;
+    width: 49%;
+}
+
+#main-ribbon {
+    text-align: center;
+}
+
+.tab {
+    color: darkgreen;
+    font-weight: bold;
+}
+
+.notification, #total_add_message, #pin_message{
+    color: darkgreen;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.title {
+    color: rgb(95, 18, 18);
+}
+
+#activate_message, #close_shift_message, #updateMessage {
+    color: red;
+    font-weight: bold;
+    margin: 10px auto;
+}
+
+.reminder-message {
+    color: rgb(190, 107, 5);
+    font-weight: bold;
+}
+#nav-message, #returnMessage {
+    color: darkgreen;
+    font-weight: bold;
+    font-size: 17px;
+    margin: 10px auto;
+}
+
+.report_head {
+    height: 5px;
+}
+
+.checkbox_list, .quickadd_list {
+    float: left;
+    margin-left: 1em;
+    width: 30%;
+}
+
+#currentGameInfo, #newGameInfo {
+    width: 50%;
+    float: left;
+}
+
+
+
+/*Store Sale Report Section*/
+#sale_content {
+    margin-left: 50px;
+}
+
+#gas_table1, #gas_table2, #gas_table3 {
+    padding-bottom: 30px;
+}
+
+.shift_sale td {
+  position: relative;
+  height: 30px;
+}
+
+.shift_sale td input {
+  position: absolute;
+  display: block;
+  top:0;
+  left:0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+
+/*Login Section*/
+#login-page {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(image/background.jpg);
+    background-size: cover;
+}
+
+#login-holder {
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 17px;
+    border: 0.5px solid;
+    padding-bottom: 4em;
+    background: rgba(199, 192, 192, 0.5);
+    text-align: center;
+}
+
+#login-image {
+     width: 80px; 
+     height: 80px;
+}
+
+#login-error-msg-holder, #missing_error {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+}
+
+#login-header {
+    font-size: 30px;
+}
+
+#login-image {
+    text-align: center;
+}
+
+#login-form {
+    display: grid;
+    margin: 0 auto;
+    width: 30%;
+}
+
+.login-form-field::placeholder {
+    color: #3a3a3a;
+}
+
+.login-form-field {
+    border: none;
+    border-bottom: 1px solid #3a3a3a;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    outline: none;
+}
+
+#login-form-submit {
+    width: 100%;
+    margin-top: 10px;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: #3a3a3a;
+    cursor: pointer;
+    outline: none;
+}
+
+.print:last-child {
+    page-break-after: auto;
+}
+
+/*Print Properties*/
+@media print {
+  #home_button, #generation, #pin, #sale_print, #print, #closeShift, #toggle, .divide {
+    display: none;
+  }
+
+  #spacer {
+      display: block;
+  }
+}
+
+
+/*Responsive*/
+@media only screen and (min-width: 768px) and (max-width : 1024px) {
+    #main-holder {
+        -webkit-overflow-scrolling: touch;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    #firstCol, #secondCol {
+        float: left;
+        width: 100%;
+        margin-left: 0.25em;
+    }
+    .title, .tab, .notification {
+        font-size: 13px;
+    }
+    #nav-message, #returnMessage {
+        font-size: 10px;
+    }
+    #activate_message, #reminder, #close_shift_message {
+        font-size: 13px;
+    }
+
+    #game_info {
+        table-layout: auto;
+        overflow: scroll;
+    }
+    #checkbox-list1, #checkbox-list2, #checkbox-list3 {
+        width: 100%;
+    }
+    
+    
+    #login-form {
+        width: 90%;
+    }
+    #login-header {
+        font-size: 15px;
+    }
+    #login-holder {
+        width: 60%;
+    }
+    #login-image {
+        width: 50px; 
+        height: 50px;
+    }
+    .login-form-field {
+        margin-bottom: 5px;
+    }
+    #login-form-submit {
+        width: 100%;
+        margin-top: 5px;
+        padding: 3.5px;
+    }
+}
+
+
+
